@@ -1,0 +1,116 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header nav ul li {
+    margin: 0 1em;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #bbb;
+}
+
+header h1 {
+    animation: fadeInDown 1s ease-in-out;
+    margin: 0;
+    padding: 0;
+}
+
+.about-section {
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1, h2 {
+    color: #333;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+p {
+    color: #666;
+    line-height: 1.6;
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+.about-content, .team-content, .animated-content, .innovation-content {
+    margin-bottom: 2em;
+}
+
+.animated-content, .innovation-content {
+    animation: fadeInUp 2s ease-in-out;
+}
+
+/* Navigation item animation delay */
+header nav ul li {
+    animation: fadeIn 0.5s ease-in-out;
+    animation-delay: calc(0.5s + (var(--i) * 0.1s));
+    display: inline-block;
+    list-style: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Adding smooth scroll effect for navigation */
+html {
+    scroll-behavior: smooth;
+}
