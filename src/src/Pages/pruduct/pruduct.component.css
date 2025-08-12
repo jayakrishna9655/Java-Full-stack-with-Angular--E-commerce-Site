@@ -1,0 +1,143 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.navbar ul li {
+    margin: 0 1em;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #bbb;
+    transform: scale(1.1);
+}
+
+.header {
+    text-align: center;
+    margin: 1em 0;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    color: #333;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em;
+    background-color: #fff;
+    animation: fadeIn 2s ease-in-out;
+    gap: 20px; /* Added gap between product cards */
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    flex: 1 1 200px; /* Adjusted flex property for better alignment */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 200px; /* Increased width */
+    height: auto;
+    margin-bottom: 1em;
+    border-radius: 10px;
+}
+
+.innovation-section {
+    padding: 2em;
+    text-align: center;
+    background-color: #f4f4f4;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.innovation-section h2 {
+    color: #333;
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+.innovation-section p {
+    color: #666;
+    line-height: 1.6;
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInLeft {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+/* Adding smooth scroll effect for navigation */
+html {
+    scroll-behavior: smooth;
+}

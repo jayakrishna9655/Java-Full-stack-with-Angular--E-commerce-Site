@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a [routerLink]="['/home1']">Home</a></li>
+            <li><a [routerLink]="['/product1']">Shop</a></li>
+            <li><a [routerLink]="['/cart']">Cart</a></li>
+            <li><a [routerLink]="['/contact']">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <h1>Welcome to Shop</h1>
+    </header>
+
+    <div class="product-container">
+        <div *ngFor="let product of products; let i = index" class="product-card" [style.animationDelay]="(i * 0.1) + 's'">
+            <img [src]="product.image" alt="{{ product.name }}" class="product-image">
+            <h3>{{ product.name }}</h3>
+            <p>Price: ${{ product.price }}</p>
+            <button (click)="addToCart(product)">Add to Cart</button>
+        </div>
+    </div>
+
+    <section class="innovation-section">
+        <h2>Innovations</h2>
+        <p>Explore our latest innovative features that enhance your shopping experience. From AI-powered recommendations to real-time updates, we constantly strive to bring the best to our customers.</p>
+    </section>
+
+    <router-outlet></router-outlet>
+</body>
+</html>
